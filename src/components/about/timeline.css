@@ -1,0 +1,120 @@
+.timeline__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul {
+    list-style: none;
+}
+
+.timeline ul li {
+    padding: 1rem;
+    background-color: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.timeline ul li:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.timeline ul li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-content small {
+    font-size: 0.7rem;
+    color: var(--color-primary);
+}
+
+.timeline-content h3 {
+    font-size: 1rem;
+}
+
+.timeline-content h5 {
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    font-size: 0.9rem;
+    color: var(--color-light);
+}
+
+
+/* MEDIA QUERY */
+@media only screen and (min-width: 600px) {
+    .timeline {
+        width: 80%;
+    }
+
+    .timeline:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 1px;
+        height: 100%;
+        background-color: var(--color-primary-variant);
+    }
+
+    .timeline ul li {
+        width: 50%;
+        position: relative;
+        margin-bottom: 2.5rem;
+    }
+
+    .timeline ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 1rem 0px 1rem 1rem;
+    }
+
+    .timeline ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 1rem 1rem 1rem;
+    }
+
+    .timeline ul li::before {
+        content: "";
+        position: absolute;
+        height: 1.2rem;
+        width: 1.2rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        top: 0px;
+    }
+
+    .timeline ul li:nth-child(odd)::before {
+        transform: translate(50%, -50%);
+        right: -30px;
+    }
+
+    .timeline ul li:nth-child(even)::before {
+        transform: translate(-50%, -50%);
+        left: -30px;
+    }
+
+    .timeline-content small {
+        position: absolute;
+        top: -30px;
+    }
+}
