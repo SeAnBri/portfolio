@@ -13,10 +13,12 @@
 :root {
     --color-bg: #121212;
     --color-bg-variant: #181818;
+    --color-bg-layer: #202020;
     --color-primary: rgba(52,199,89,1);
     --color-primary-variant: #48BF53;
-    --color-white: #fff;
+    --color-contrast: #fff;
     --color-light: rgba(255, 255, 255, 0.6);
+    --color-nav-hover: #282828;
 
     --transition: all 400ms ease;
 
@@ -36,11 +38,35 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     hyphens: auto;
-    text-align: justify;
-    text-align-last: none;
     background: var(--color-bg);
-    color: var(--color-white);
-    line-height: 1.7;
+    color: var(--color-contrast);
+    line-height: 1.6;
+    min-height: 100%;
+}
+
+/* SPACING */
+
+.v-space {
+    width: 100%;
+}
+
+.v-space.medium {
+    display: block;
+    height: 32px;
+}
+
+.v-space.large {
+    height: 64px;
+}
+
+@media screen and (max-width: 1024px) {
+    .v-space.medium {
+        height: 24px;
+    }
+
+    .v-space.large {
+        height: 48px;
+    }
 }
 
 /* GENERAL STYLES */
@@ -50,7 +76,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 h1 {
@@ -58,17 +84,36 @@ h1 {
 }
 
 section {
-    margin-top: 8rem;
+    padding-top: 2rem;
+    padding-left: 5.5rem;
+    padding-bottom: 6rem;
 }
 
 section > h2, section > h5 {
     text-align: center;
-    color: var(--color-light);
+    color: var(--color-contrast);
 }
 
 section > h2 {
     color: var(--color-primary);
+}
+
+section > h5 {
+    line-height: 160%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     margin-bottom: 3rem;
+}
+
+.caps-header {
+    margin-bottom: 4px;
+    line-height: 160%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.caps-header.small {
+    font-size: 14px;
 }
 
 .text-light {
@@ -81,7 +126,7 @@ a {
 }
 
 a:hover {
-    color: var(--color-light)
+    color: var(--color-contrast);
 }
 
 .btn {
@@ -96,7 +141,7 @@ a:hover {
 }
 
 .btn:hover {
-    background: var(--color-white);
+    background: var(--color-contrast);
     color: var(--color-bg);
     border-color: transparent;
 }
@@ -112,6 +157,10 @@ img {
     object-fit: cover;
 }
 
+b {
+    color: var(--color-contrast);
+}
+
 /* MEDIA QUERY (Medium) */
 @media screen and (max-width: 1024px) {
     .container {
@@ -120,16 +169,18 @@ img {
 
     section {
         margin-top: 6rem;
+        padding-left: 0;
     }
 }
 
 /* MEDIA QUERY (Small) */
 @media screen and (max-width: 600px) {
-    .container {
-        width: var(--container-width-sm);
+
+    section {
+        height: auto;
     }
 
-    section > h2 {
-        margin-bottom: 2rem;
+    .container {
+        width: var(--container-width-sm);
     }
 }

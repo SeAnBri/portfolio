@@ -17,8 +17,8 @@ const Contact = () => {
 
   return (
     <section id='contact'>
-      <h5>in Verbindung setzen</h5>
       <h2>Kontakt</h2>
+      <h5>in Verbindung setzen</h5>
 
       <div className='container contact__container'>
         <div className='contact__options'>
@@ -30,9 +30,9 @@ const Contact = () => {
           </article>
         </div>
         <form ref={form} onSubmit={sendEmail}>
-          <input type='text' name='name' placeholder='Your Full Name' required/>
-          <input type='email' name='email' placeholder='Your Email' required/>
-          <textarea name='message' rows='7' placeholder='Your Message' required/>
+          <input type='text' name='name' placeholder='Vollständiger Name' required/>
+          <input type='email' name='email' placeholder='Email' required/>
+          <textarea name='message' rows='7' placeholder='Nachricht' required/>
           <button type='submit' className='btn btn-primary'>Nachricht senden</button>
         </form>
       </div>

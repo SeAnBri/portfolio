@@ -6,20 +6,32 @@ import Experience from './components/experience/Experience'
 import Portfolio from './components/portfolio/Portfolio'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
-import Timeline from './components/about/Timeline'
+import Project from './components/project/Project'
+
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
-      <Header/>
+    <div>
+      <Routes>
+        <Route path="/" element={<Main/>} />
+        <Route path="/portfolio/:projectId" element={<Project/>}/>
+      </Routes>
+    </div>
+  )
+}
+
+function Main() {
+  return (
+    <div className='App'>
       <Nav/>
-      <About/>
-      <Timeline/>
-      <Experience/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
-    </>
+      <Header />
+      <Portfolio />
+      <About />
+      <Experience />
+      <Contact />
+      <Footer />
+    </div>
   )
 }
 

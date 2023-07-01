@@ -1,0 +1,47 @@
+.slideshow {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.slideshow-nav a {
+    font-size: 40px;
+}
+
+.slideshow-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}
+
+.slideshow-dots {
+  justify-content: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-contrast);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: var(--color-primary);
+}
+
+.phone-slideshow-button {
+  display: flex;
+  align-self: center;
+}
+
+
+/* MEDIA QUERY (Medium) */
+@media screen and (max-width: 1024px) {}
+
+/* MEDIA QUERY (Small) */
+@media screen and (max-width: 600px) {}
+
