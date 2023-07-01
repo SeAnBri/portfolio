@@ -1,28 +1,28 @@
 header {
     height: 100vh;
-    overflow: hidden;
     display: flex;
 }
 
 .header__container {
-    scroll-snap-align: center;
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+    scroll-snap-align: center;
+    justify-content: center;
+    gap: 4rem;
 }
 
 .description__container {
-    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    max-width: 500px;
 }
 
 .description__container h1 {
     font-size: 54px;
     line-height: 4rem;
     color: var(--color-contrast);
+    hyphens: none;
 }
 
 .description__container p {
@@ -41,7 +41,6 @@ header {
 
 /* ME Image */
 .me__container {
-    flex: 2;
     border-radius: 9999px;
     display: flex;
     justify-content: center;
@@ -54,28 +53,8 @@ header {
     width: 25rem;
 }
 
-/* MEDIA QUERY (Medium) */
-@media screen and (max-width: 1024px) {
-
-    .header__container {
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .me__container {
-        align-items: flex-end;
-    }
-
-    .description__container {
-        justify-content: flex-start;
-        align-items: center;
-        text-align: center;
-    }
-}
-
-/* MEDIA QUERY (Small) */
-@media screen and (max-width: 600px) {
-
+/* MEDIA QUERY (Large-Medium) */
+@media screen and (max-width: 1200px) {
 
     .header-image {
         height: 20rem;
@@ -85,5 +64,57 @@ header {
     .description__container h1 {
         font-size: 42px;
         line-height: 3rem;
+    }
+}
+
+/* MEDIA QUERY (Medium) */
+@media screen and (max-width: 1024px) {
+
+    .header__container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .me__container {
+        align-items: flex-end;
+    }
+
+    .description__container {
+        align-self: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* MEDIA QUERY (Small) */
+@media screen and (max-width: 600px) {
+    
+    .header-image {
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .description__container h1 {
+        font-size: 42px;
+        line-height: 3rem;
+    }
+}
+
+/* MEDIA QUERY (Very Small Height) */
+@media screen and (max-width: 600px) and (max-height: 800px) {
+
+    .header__container {
+        justify-content: flex-start;
+        padding-top: 2rem;
+    }
+
+    .header-image {
+        height: 14rem;
+        width: 14rem;
+    }
+
+    .description__container h1 {
+        font-size: 28px;
+        line-height: 2rem;
     }
 }

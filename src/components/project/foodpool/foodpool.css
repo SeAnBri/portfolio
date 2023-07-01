@@ -33,11 +33,11 @@
 }
 
 .foodpool-image {
-    overflow: hidden;
     height: 480px;
 }
 
 .foodpool-image img {
+    object-fit: contain;
     max-height: 100%; 
     max-width: 100%;
 }

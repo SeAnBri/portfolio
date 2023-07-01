@@ -40,6 +40,15 @@
     color: var(--color-primary);
 }
 
+/* MEDIA QUERY (Large-Medium) */
+@media screen and (max-width: 1200px) {
+    
+    .experience__container > div {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 /* MEDIA QUERY (Medium) */
 @media screen and (max-width: 1024px) {
     .experience__container {

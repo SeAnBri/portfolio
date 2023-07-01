@@ -11,6 +11,7 @@
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
+    height: 100%;
 }
 
 .portfolio__item:hover {
@@ -37,12 +38,6 @@
 .portfolio__item p {
     margin-bottom: 3rem;
     color: var(--color-light);
-}
-
-.portfolio__item-cta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
 }
 
 .stack__container {
